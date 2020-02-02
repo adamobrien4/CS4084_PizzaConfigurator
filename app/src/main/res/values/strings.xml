@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PizzaConfigurator</string>
+
+    <string-array name="pizza_types">
+        <item>Pepperoni</item>
+        <item>Margeurita</item>
+        <item>Hawaian</item>
+        <item>Vegetarian</item>
+    </string-array>
+</resources>
