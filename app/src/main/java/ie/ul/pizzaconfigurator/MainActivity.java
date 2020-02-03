@@ -22,29 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Pizza Type Spinner
         res += ((Spinner) findViewById(R.id.pizza_type_spinner)).getSelectedItem().toString() + "\n";
-
         // Extras
-        if (((CheckBox) findViewById(R.id.extra_cheese)).isChecked()) {
-            res += "Extra Cheese\n";
-        }
-        if (((CheckBox) findViewById(R.id.extra_bacon)).isChecked()) {
-            res += "Extra Bacon\n";
-        }
-        if (((CheckBox) findViewById(R.id.extra_sauce)).isChecked()) {
-            res += "Extra Sauce\n";
-        }
-
+        res += (((CheckBox) findViewById(R.id.extra_cheese)).isChecked()) ? "Extra Cheese\n" : "No Extra Cheese\n";
+        res += (((CheckBox) findViewById(R.id.extra_bacon)).isChecked()) ? "Extra Bacon\n" : "No Extra Bacon\n";
+        res += (((CheckBox) findViewById(R.id.extra_sauce)).isChecked()) ? "Extra Sauce\n" : "No Extra Sauce\n";
         // Options
-        if (((Switch) findViewById(R.id.option_crust)).isChecked()) {
-            res += "Stuffed Crust\n";
-        }
-        if (!((Switch) findViewById(R.id.option_sliced)).isChecked()) {
-            res += "Not Sliced\n";
-        }
-        if (((Switch) findViewById(R.id.option_cutlery)).isChecked()) {
-            res += "Included Cutlery";
-        }
-
+        res += (((Switch) findViewById(R.id.option_sliced)).isChecked()) ? "Sliced Pizza\n" : "Not Sliced Pizza\n";
+        res += (((Switch) findViewById(R.id.option_crust)).isChecked()) ? "Stuffed Crust\n" : "No Stuffed Crust\n";
+        res += (((Switch) findViewById(R.id.option_cutlery)).isChecked()) ? "Cutlery Included\n" : "No Cutlery Included\n";
 
         return res;
     }
